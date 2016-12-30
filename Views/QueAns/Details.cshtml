@@ -1,0 +1,74 @@
+﻿@model MingleBoxProject.Models.tblQueAn
+
+@{
+    ViewBag.Title = "Details"; Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.que)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.que)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.opA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.opA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.opB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.opB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.opC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.opC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.opD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.opD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbExamCategory.examcatname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbExamCategory.examcatname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.queid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

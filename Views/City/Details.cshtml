@@ -1,0 +1,35 @@
+﻿@model MingleBoxProject.Models.tblCity
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cirtyname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cirtyname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblState.statename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblState.statename)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cityid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

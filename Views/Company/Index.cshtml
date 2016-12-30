@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MingleBoxProject.Models.tblCompanyReg>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.compname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.compemail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cpass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cmobno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.clogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cdesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblCity.cirtyname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.compname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.compemail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cpass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cmobno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.clogo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cdesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblCity.cirtyname)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.compid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.compid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.compid })
+        </td>
+    </tr>
+}
+
+</table>

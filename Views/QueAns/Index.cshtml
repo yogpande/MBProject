@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MingleBoxProject.Models.tblQueAn>
+
+@{
+    ViewBag.Title = "Index"; Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.que)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.opA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.opB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.opC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.opD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ans)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbExamCategory.examcatname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.que)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.opA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.opB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.opC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.opD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ans)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbExamCategory.examcatname)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.queid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.queid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.queid })
+        </td>
+    </tr>
+}
+
+</table>

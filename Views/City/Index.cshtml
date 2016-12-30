@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MingleBoxProject.Models.tblCity>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cirtyname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblState.statename)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cirtyname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblState.statename)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cityid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cityid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cityid })
+        </td>
+    </tr>
+}
+
+</table>

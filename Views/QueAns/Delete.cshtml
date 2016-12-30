@@ -1,0 +1,80 @@
+﻿@model MingleBoxProject.Models.tblQueAn
+
+@{
+    ViewBag.Title = "Delete"; Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.que)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.que)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.opA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.opA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.opB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.opB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.opC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.opC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.opD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.opD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbExamCategory.examcatname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbExamCategory.examcatname)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

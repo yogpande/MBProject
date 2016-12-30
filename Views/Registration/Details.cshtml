@@ -1,0 +1,90 @@
+﻿@model MingleBoxProject.Models.tblUserReg
+
+@{
+    ViewBag.Title = "Details"; Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.uname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.uemail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uemail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.upass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.upass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.uregdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uregdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.umob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.umob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.upic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.upic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.uqual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uqual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.about)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.about)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblCity.cirtyname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblCity.cirtyname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.uid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

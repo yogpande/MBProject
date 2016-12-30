@@ -1,0 +1,75 @@
+﻿@model MingleBoxProject.Models.tblCompanyReg
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.compname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.compemail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compemail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cpass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cmobno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cmobno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clogo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clogo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cdesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cdesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblCity.cirtyname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblCity.cirtyname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.compid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

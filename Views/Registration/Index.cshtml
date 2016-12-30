@@ -1,0 +1,81 @@
+﻿@model IEnumerable<MingleBoxProject.Models.tblUserReg>
+
+@{
+    ViewBag.Title = "Index"; Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.uname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.uemail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.upass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.uregdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.umob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.upic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.uqual)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.about)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblCity.cirtyname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.uname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.uemail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.upass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.uregdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.umob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.upic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.uqual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.about)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblCity.cirtyname)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.uid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.uid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.uid })
+        </td>
+    </tr>
+}
+
+</table>

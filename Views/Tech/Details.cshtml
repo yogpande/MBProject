@@ -1,0 +1,26 @@
+﻿@model MingleBoxProject.Models.tblTech
+
+@{
+    ViewBag.Title = "Details"; Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+  
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.techname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.techname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.techid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

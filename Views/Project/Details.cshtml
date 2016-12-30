@@ -1,0 +1,90 @@
+﻿@model MingleBoxProject.Models.tblProject
+
+@{
+    ViewBag.Title = "Details"; Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.protitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.protitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prodesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prodesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.budjet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.budjet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.proavila)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proavila)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.edate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblCompanyReg.compname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblCompanyReg.compname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblProjectCate.procatname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblProjectCate.procatname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.proid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
