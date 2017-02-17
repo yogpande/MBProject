@@ -1,0 +1,52 @@
+﻿@model IEnumerable<MingleBoxProject.Models.tblEmployement>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.empdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empstatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.companyid)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.empdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empstatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.userid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.companyid)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.empid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.empid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.empid })
+        </td>
+    </tr>
+}
+
+</table>
