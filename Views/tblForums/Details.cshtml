@@ -1,0 +1,51 @@
+﻿@model MingleBoxProject.Models.tblForum
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblForum</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.companyid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.companyid)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.forumid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
