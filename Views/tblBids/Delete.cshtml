@@ -1,0 +1,65 @@
+﻿@model MingleBoxProject.Models.tblBid
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblBid</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.bidderid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bidderid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bamnt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bamnt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bduration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bduration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblProject.protitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblProject.protitle)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

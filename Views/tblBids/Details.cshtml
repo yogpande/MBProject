@@ -1,0 +1,59 @@
+﻿@model MingleBoxProject.Models.tblBid
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblBid</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.bidderid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bidderid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bamnt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bamnt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bduration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bduration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblProject.protitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblProject.protitle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.bidid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

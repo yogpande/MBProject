@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MingleBoxProject.Models.tblBid>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/main.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.bidderid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bamnt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bduration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblProject.protitle)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.bidderid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bamnt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bduration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblProject.protitle)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.bidid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.bidid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.bidid })
+        </td>
+    </tr>
+}
+
+</table>
